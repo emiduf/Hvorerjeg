@@ -1,5 +1,5 @@
 // leser opp tekst hvis nettleseren støtter det
-export function tale(tekst) {
+export function speak(tekst) {
   if (!('speechSynthesis' in window)) return;
 
 // Stopp eventuell pågående tale
@@ -19,6 +19,6 @@ if (norskStemme) {
 }
 
   // Start tale
-  window.speechSynthesis.tale(utter);
+  window.speechSynthesis.speak(utter);
 
 }
