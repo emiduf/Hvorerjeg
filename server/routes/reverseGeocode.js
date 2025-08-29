@@ -1,6 +1,5 @@
 import { Router } from "express";
 import axios from "axios";
-import { Component } from "react";
 
 //lager en router for reverse geocoding endepunktet
 const router = Router();  
