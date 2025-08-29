@@ -53,33 +53,33 @@ export default function App() {
 
         {/* Selve knappen som starter hele flyten */}
         <button
-          onClick={handleClick}
-          disabled={loading}
+          onClick={hentMinPosisjon}
+          disabled={laster}
           style={{
             padding: "18px 28px",
             fontSize: 18,
             borderRadius: 12,
             border: "none",
             boxShadow: "0 8px 24px rgba(0,0,0,.15)",
-            cursor: loading ? "not-allowed" : "pointer"
+            cursor: laster ? "not-allowed" : "pointer"
           }}
         >
-          {loading ? "Henter..." : "Finn adressen min"}
+          {laster ? "Henter..." : "Finn adressen min"}
         </button>
 
         {/* Når vi har en adresse, vis den (aria-live hjelper skjermlesere) */}
-        {address && (
+        {adresse && (
           <div style={{ marginTop: 24 }} aria-live="polite">
             <strong>Adresse:</strong>
             <br />
-            {address}
+            {adresse}
           </div>
         )}
 
         {/* Vis feilmeldinger i rødt om noe gikk galt */}
-        {error && (
+        {feil && (
           <div style={{ marginTop: 24, color: "crimson" }}>
-            {error}
+            {feil}
           </div>
         )}
       </div>
