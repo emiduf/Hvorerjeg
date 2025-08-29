@@ -22,16 +22,16 @@ router.get("/", async (req, res) => {
   });
 
   //lesbar addresse fra responsen
-  const addresse = respons.data?.display_name;
+  const adresse = respons.data?.display_name;
 
-  if (!addresse) {
+  if (!adresse) {
     return res.status(404).json({ error: "Fant ikke adressen" });
   }
 
   //sender respons til front-end
   res.json({
-     addresse, //full streng med adressen
-     components: respons.data.addresse ?? null, //komponenter av adressen som gate, by, postnummer osv
+     adresse, //full streng med adressen
+     components: respons.data.adresse ?? null, //komponenter av adressen som gate, by, postnummer osv
      provider: "Nominatim OpenStreetMap" //info for om leverandør av geokoding
   });
 } catch (e) {
