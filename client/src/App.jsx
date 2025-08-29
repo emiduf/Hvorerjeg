@@ -25,6 +25,7 @@ export default function App() {
 
       // Henter adresse basert på posisjon
       const data = await reverseGeocode(pos.coords.latitude, pos.coords.longitude);
+      console.log("API-respons:", data);
       setAdresse(data.adresse);
 
       // Leser opp adressen
