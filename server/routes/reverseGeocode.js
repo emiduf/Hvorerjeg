@@ -31,7 +31,7 @@ router.get("/", async (req, res) => {
   //sender respons til front-end
   res.json({
      adresse, //full streng med adressen
-     components: respons.data.adresse ?? null, //komponenter av adressen som gate, by, postnummer osv
+     components: respons.data.address ?? null, //komponenter av adressen som gate, by, postnummer osv
      provider: "Nominatim OpenStreetMap" //info for om leverandør av geokoding
   });
 } catch (e) {
