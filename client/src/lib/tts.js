@@ -1,5 +1,5 @@
 // leser opp tekst hvis nettleseren støtter det
-export function speak(tekst) {
+export function tale(tekst) {
   if (!('speechSynthesis' in window)) return;
 
 // Stopp eventuell pågående tale
