@@ -7,7 +7,7 @@ export function hentPosisjon() {
     }
 
     // Be om posisjon
-    navigator.geolocation.hentPosisjon(
+    navigator.geolocation.getCurrentPosition(
       // Sender posisjonsobjektet
       resolve,
       // Håndterer feil
